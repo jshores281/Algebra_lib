@@ -2,10 +2,40 @@
 
 
 class functions:
+
+
+
+	def calc_linear():
+		pass
+
+	def roc_linear():
+		pass
+
+
+
+	def calc_polynom():
+		pass
+
+	def roc_polynom():
+		pass
+
+
+
+
+	def calc_exponential():
+		pass
+
+	def roc_exponential():
+		pass
+
+
+
+
 	def calc_logistic(t, l, y=1, k=0):
 		"""
 		
-		calc_logistic(t, L, Y, K) 
+		input = calc_logistic(t, L, Y, K) 
+		output = [t, logistic calculation]
 
 		Calculates the rate of change between one
  		point in a logistics function. 
@@ -22,7 +52,6 @@ class functions:
 		e = eulers number used as constant
 		y = eulers multiplier. defaults to one if none
 		x = sigmoid midpoint
-
 		"""
 
 		e = float(2.718281828459045)
@@ -36,8 +65,9 @@ class functions:
 	def roc_logistic(t1, t2, l, y=1, k=0):
 		"""
 
-		roc_logistic(t1, t2, L, Y=1, K=0)  
-		   
+		input = roc_logistic(t1, t2, L, Y=1, K=0)  
+		output = [t1, t2, rate of change]
+
 		Calculates average rate of change between two
  		points in a logistics function. 
 		
@@ -53,7 +83,6 @@ class functions:
 		e = eulers number used as constant
 		y = eulers multiplier. defaults to one if none
 		x = sigmoid midpoint
-
 		"""
 
 		e = float(2.718281828459045)
@@ -64,16 +93,30 @@ class functions:
 		y1 = round(y1, 6)
 		y2 = round(y2, 6)
 
-		print("\nPoint of {} = {}".format(t1, y1))
-		print("Point of {} = {}".format(t2, y2))
 
 		y_out = y2 - y1
 		x_out = t2 - t1
 
 
+		if x_out == 0:
+			return [t1,t2,0]
 
-		outcome = y_out / x_out
+		else:
+			outcome = y_out / x_out
+			return [t1,t2,outcome]
 
-		return [t1,t2,outcome]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
