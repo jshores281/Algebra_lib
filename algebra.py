@@ -170,7 +170,3 @@ class spread_metrics:
 	def std_devi():
 		pass
 
-
-
-
-test rebase
