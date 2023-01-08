@@ -1,10 +1,7 @@
 
 
-
-class functions:
-
-
-
+# applied algebra 
+class graph_calcs:
 	def calc_linear():
 		pass
 
@@ -13,6 +10,7 @@ class functions:
 
 
 
+	# determine polynomial degree
 	def calc_polynom():
 		pass
 
@@ -108,13 +106,68 @@ class functions:
 
 
 
+# applied statistics and probability 
+# calculates the mean, median, mode, average and range interquartile range of a list of data
+class spread_metrics:
+
+	# average
+	def mean(a):
+		lst = 0
+		alen = len(a)
+		for i in a:
+			lst += i
+
+		mean = lst/len(a)
+		return f'original list: {a}\nlist length: {alen}\nmean/avg of list: {mean}'
+
+	# a = [1,2,8,4,5,6,7,3,13,60,34,12,33,45]
+	# print(mean(a))
 
 
 
 
 
+	def median(lst):
+		# sort list
+		lst.sort()
+
+		llst = len(lst)
+		
+		# find middle
+		half_lst = llst/2
 
 
+		if half_lst % 2 == 0:
+			half_lst = int(half_lst)
+			half_lst2 = half_lst + 1
+			median = lst[half_lst] + lst[half_lst2] / 2
+			
+			return f'original list sorted: {lst}\nlist length: {llst}\nmedian is: {median}'
+
+
+		
+		# if middle point is 2 objects, average them
+		elif half_lst % 2 != 0:
+			half_lst = round(half_lst)
+			median = lst[half_lst]
+			
+			return f'original list sorted: {lst}\nlist length: {llst}\nmedian is: {median}'	
+
+	# a = [1,2,8,4,5,6,7,3,13,60,34,12,33,45]
+	# print(median(a))
+
+
+
+	def mode():
+		pass
+
+
+	def listrange():
+		pass
+
+
+	def quartiles():
+		pass
 
 
 
