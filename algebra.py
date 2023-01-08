@@ -161,12 +161,13 @@ class spread_metrics:
 	def mode():
 		pass
 
-
 	def listrange():
 		pass
 
-
 	def quartiles():
+		pass
+
+	def std_devi():
 		pass
 
 
