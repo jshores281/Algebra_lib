@@ -118,7 +118,7 @@ class spread_metrics:
 			lst += i
 
 		mean = lst/len(a)
-		return print(f'\noriginal list: {a}\nlist length: {alen}\nmean/avg of list: {mean}')
+		return f'original list: {a}\nlist length: {alen}\nmean/avg of list: {mean}'
 
 	# a = [1,2,8,4,5,6,7,3,13,60,34,12,33,45]
 	# print(mean(a))
@@ -171,3 +171,6 @@ class spread_metrics:
 		pass
 
 
+
+
+test rebase
